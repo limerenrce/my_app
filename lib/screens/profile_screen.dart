@@ -92,8 +92,8 @@ class ProfileScreen extends StatelessWidget {
                               )),
                               Card.outlined(
                                   child: _SampleCard(
-                                cardName: 'Quality Assurance',
-                                location: '/third-screen',
+                                cardName: 'Fetch Datas',
+                                location: '/datas-screen',
                               )),
                             ],
                           ),

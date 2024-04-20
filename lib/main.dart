@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/dto/foods.dart';
+import 'package:my_app/screens/datas_screen.dart';
 import 'package:my_app/screens/foods_screen.dart';
 import 'package:my_app/screens/home_screen.dart';
 import 'package:my_app/screens/news_screen.dart';
@@ -26,7 +28,8 @@ class MyApp extends StatelessWidget {
         '/second-screen': (context) => const SecondScreen(),
         '/custom-screen': (context) => const CustomScreen(),
         '/news-screen': (context) => const NewsScreen(),
-        '/foods-screen': (context) => const FoodsScreen()
+        '/foods-screen': (context) => const FoodsScreen(),
+        '/datas-screen': (context) => const DatasScreen(),
       },
     );
   }
