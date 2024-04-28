@@ -5,7 +5,9 @@ import 'package:my_app/screens/foods_screen.dart';
 import 'package:my_app/screens/home_screen.dart';
 import 'package:my_app/screens/news_screen.dart';
 import 'package:my_app/screens/routes/SecondScreen/custom_screen.dart';
+import 'package:my_app/screens/routes/SecondScreen/profile2_screen.dart';
 import 'package:my_app/screens/routes/SecondScreen/second_screen.dart';
+import 'package:my_app/screens/routes/SecondScreen/support_screen.dart';
 import 'package:my_app/screens/setting_screen.dart';
 import 'package:my_app/screens/profile_screen.dart';
 
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
         '/news-screen': (context) => const NewsScreen(),
         '/foods-screen': (context) => const FoodsScreen(),
         '/datas-screen': (context) => const DatasScreen(),
+        '/profile-screen': (context) => Profile2Page(),
+        '/support-screen': (context) => const SupportScreen(),
       },
     );
   }

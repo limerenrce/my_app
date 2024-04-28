@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unnecessary_import
 import 'package:flutter/widgets.dart';
 import 'package:my_app/components/text_container.dart';
 import 'package:my_app/screens/routes/SecondScreen/bookmark_screen.dart';
@@ -102,13 +103,13 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Card.outlined(
                                   child: _SampleCard(
-                                cardName: 'AAA BBB',
-                                location: '/first-screen',
+                                cardName: 'Profile',
+                                location: '/profile-screen',
                               )),
                               Card.outlined(
                                   child: _SampleCard(
-                                cardName: 'CCC DDD',
-                                location: '/second-screen',
+                                cardName: 'Customer Support',
+                                location: '/support-screen',
                               )),
                             ],
                           ),
