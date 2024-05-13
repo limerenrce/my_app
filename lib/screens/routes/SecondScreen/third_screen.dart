@@ -82,7 +82,7 @@ class ThirdScreen extends StatelessWidget {
 }
 
 class Star extends StatefulWidget {
-  const Star({Key? key}) : super(key: key);
+  const Star({super.key});
 
   @override
   State<Star> createState() => _StarState();
@@ -137,9 +137,9 @@ class _StarState extends State<Star> {
                   : const Icon(Icons.bookmark)),
               onPressed: _toggleMarked,
             ),
-            SizedBox(
+            const SizedBox(
               child: SizedBox(
-                child: const Text('Bookmark'),
+                child: Text('Bookmark'),
               ),
             ),
           ]),

@@ -1,11 +1,11 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, unnecessary_import
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:my_app/components/asset_image_widget.dart';
 // import 'package:my_app/components/text_container.dart';
 
 class CustomScreen extends StatefulWidget {
-  const CustomScreen({Key? key}) : super(key: key);
+  const CustomScreen({super.key});
 
   @override
   _CustomScreenState createState() => _CustomScreenState();

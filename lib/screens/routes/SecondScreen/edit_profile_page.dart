@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'dart:io';
 
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
@@ -11,6 +13,8 @@ import 'package:my_app/components/textfield_widget.dart';
 import 'package:path/path.dart';
 
 class EditProfilePage extends StatefulWidget {
+  const EditProfilePage({super.key});
+
   @override
   _EditProfilePageState createState() => _EditProfilePageState();
 }
@@ -28,8 +32,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
         child: Builder(
           builder: (context) => Scaffold(
             body: ListView(
-              padding: EdgeInsets.symmetric(horizontal: 32),
-              physics: BouncingScrollPhysics(),
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              physics: const BouncingScrollPhysics(),
               children: [
                 ProfileWidget(
                   imagePath: user.imagePath,
@@ -38,8 +42,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     final image = await ImagePicker()
                         .pickImage(source: ImageSource.gallery);
 
-                    if (image == null)
+                    if (image == null) {
                       return; // User canceled selecting an image
+                    }
 
                     final directory = await getApplicationDocumentsDirectory();
                     final name = basename(image.path);

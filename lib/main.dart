@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/dto/foods.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_app/cubit/counter_cubit.dart';
 import 'package:my_app/screens/datas_screen.dart';
 import 'package:my_app/screens/foods_screen.dart';
 import 'package:my_app/screens/home_screen.dart';
 import 'package:my_app/screens/news_screen.dart';
+import 'package:my_app/screens/routes/SecondScreen/counter_screen.dart';
 import 'package:my_app/screens/routes/SecondScreen/custom_screen.dart';
 import 'package:my_app/screens/routes/SecondScreen/profile2_screen.dart';
 import 'package:my_app/screens/routes/SecondScreen/second_screen.dart';
 import 'package:my_app/screens/routes/SecondScreen/support_screen.dart';
+import 'package:my_app/screens/routes/showc_screen.dart';
 import 'package:my_app/screens/setting_screen.dart';
 import 'package:my_app/screens/profile_screen.dart';
 
@@ -16,31 +19,38 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<CounterCubit>(create: (context) => CounterCubit())
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const MyHomePage(title: 'Home Screen'),
+        routes: {
+          '/second-screen': (context) => const SecondScreen(),
+          '/custom-screen': (context) => const CustomScreen(),
+          '/news-screen': (context) => const NewsScreen(),
+          '/foods-screen': (context) => const FoodsScreen(),
+          '/datas-screen': (context) => const DatasScreen(),
+          '/profile-screen': (context) => const Profile2Page(),
+          '/support-screen': (context) => const SupportScreen(),
+          '/counter-screen': (context) => const CounterScreen(),
+          '/showc-screen': (context) => const ShowcScreen(),
+        },
       ),
-      home: const MyHomePage(title: 'Home Screen'),
-      routes: {
-        '/second-screen': (context) => const SecondScreen(),
-        '/custom-screen': (context) => const CustomScreen(),
-        '/news-screen': (context) => const NewsScreen(),
-        '/foods-screen': (context) => const FoodsScreen(),
-        '/datas-screen': (context) => const DatasScreen(),
-        '/profile-screen': (context) => Profile2Page(),
-        '/support-screen': (context) => const SupportScreen(),
-      },
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
 
   final String title;
 
@@ -139,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -152,10 +162,6 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Food Screen',
           ),
         ],
         currentIndex: _selectedIndex,

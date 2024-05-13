@@ -359,7 +359,7 @@ class _FoodsScreenState extends State<FoodsScreen> {
                     ),
                     Text(
                       foods[index].rating,
-                      style: TextStyle(color: Colors.grey),
+                      style: const TextStyle(color: Colors.grey),
                     ),
                   ],
                 ),

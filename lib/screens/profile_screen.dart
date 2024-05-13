@@ -6,7 +6,7 @@ import 'package:my_app/screens/routes/SecondScreen/bookmark_screen.dart';
 import 'package:my_app/screens/routes/SecondScreen/one_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   void goToAnotherRoute(context, screen) {
     Navigator.push(
@@ -118,13 +118,13 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Card.outlined(
                                   child: _SampleCard(
-                                cardName: 'EEE FFF',
-                                location: '/first-screen',
+                                cardName: 'Counter',
+                                location: '/counter-screen',
                               )),
                               Card.outlined(
                                   child: _SampleCard(
-                                cardName: 'GGG HHH',
-                                location: '/third-screen',
+                                cardName: 'Show',
+                                location: '/showc-screen',
                               )),
                             ],
                           ),

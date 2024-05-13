@@ -9,7 +9,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:my_app/endpoints/endpoints.dart';
 
 class SupportScreen extends StatefulWidget {
-  const SupportScreen({Key? key}) : super(key: key);
+  const SupportScreen({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -264,7 +264,7 @@ class _SupportScreenState extends State<SupportScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
 
                       //-----R A T I N G-----
 
@@ -275,8 +275,9 @@ class _SupportScreenState extends State<SupportScreen> {
                           direction: Axis.horizontal,
                           allowHalfRating: false,
                           itemCount: 5,
-                          itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                          itemBuilder: (context, _) => Icon(
+                          itemPadding:
+                              const EdgeInsets.symmetric(horizontal: 4.0),
+                          itemBuilder: (context, _) => const Icon(
                             Icons.star,
                             color: Colors.amber,
                           ),
@@ -289,7 +290,7 @@ class _SupportScreenState extends State<SupportScreen> {
                         ),
                       ),
 
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
 
                       //-----D E S K R I P S I   I S S U E-----
                       Container(

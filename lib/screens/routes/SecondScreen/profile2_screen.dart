@@ -1,6 +1,10 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class Profile2Page extends StatefulWidget {
+  const Profile2Page({super.key});
+
   @override
   _Profile2PageState createState() => _Profile2PageState();
 }
@@ -31,18 +35,18 @@ class _Profile2PageState extends State<Profile2Page> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 50.0,
               backgroundImage: AssetImage('assets/images/flat_img.png'),
             ),
             const SizedBox(height: 24),
-            Column(
+            const Column(
               children: [
                 Text(
                   'Satya Uttami',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4),
                 Text(
                   'uttami@gmail.com',
                   style: TextStyle(color: Colors.grey),
@@ -50,8 +54,8 @@ class _Profile2PageState extends State<Profile2Page> {
               ],
             ),
             Center(
-                child:
-                    TextButton(onPressed: () {}, child: Text('Edit Profile'))),
+                child: TextButton(
+                    onPressed: () {}, child: const Text('Edit Profile'))),
             const SizedBox(height: 20),
             Expanded(
               child: Container(
@@ -75,11 +79,12 @@ class _Profile2PageState extends State<Profile2Page> {
                         ),
                         child: Column(
                           children: [
-                            NumbersWidget(),
+                            const NumbersWidget(),
                             const SizedBox(height: 48),
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 48),
-                              child: Column(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 48),
+                              child: const Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -89,7 +94,7 @@ class _Profile2PageState extends State<Profile2Page> {
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  const SizedBox(height: 16),
+                                  SizedBox(height: 16),
                                   Text(
                                     'like to eat!',
                                     style: TextStyle(fontSize: 16, height: 1.4),
@@ -113,6 +118,8 @@ class _Profile2PageState extends State<Profile2Page> {
 }
 
 class NumbersWidget extends StatelessWidget {
+  const NumbersWidget({super.key});
+
   @override
   Widget build(BuildContext context) => Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -126,12 +133,12 @@ class NumbersWidget extends StatelessWidget {
       );
   Widget buildDivider() => Container(
         height: 24,
-        child: VerticalDivider(),
+        child: const VerticalDivider(),
       );
 
   Widget buildButton(BuildContext context, String value, String text) =>
       MaterialButton(
-        padding: EdgeInsets.symmetric(vertical: 4),
+        padding: const EdgeInsets.symmetric(vertical: 4),
         onPressed: () {},
         materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
         child: Column(
@@ -140,12 +147,12 @@ class NumbersWidget extends StatelessWidget {
           children: <Widget>[
             Text(
               value,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
             ),
-            SizedBox(height: 2),
+            const SizedBox(height: 2),
             Text(
               text,
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ],
         ),

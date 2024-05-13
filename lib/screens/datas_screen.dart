@@ -9,7 +9,7 @@ import 'package:my_app/screens/form_screen.dart';
 import 'package:my_app/services/data_service.dart';
 
 class DatasScreen extends StatefulWidget {
-  const DatasScreen({Key? key}) : super(key: key);
+  const DatasScreen({super.key});
 
   @override
   _DatasScreenState createState() => _DatasScreenState();

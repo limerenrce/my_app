@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class TextFieldWidget extends StatefulWidget {
@@ -7,12 +9,12 @@ class TextFieldWidget extends StatefulWidget {
   final ValueChanged<String> onChanged;
 
   const TextFieldWidget({
-    Key? key,
+    super.key,
     this.maxLines = 1,
     required this.label,
     required this.text,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   _TextFieldWidgetState createState() => _TextFieldWidgetState();

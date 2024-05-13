@@ -1,11 +1,9 @@
 // ignore_for_file: library_private_types_in_public_api
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:my_app/components/asset_image_widget.dart';
 
 class SettingScreen extends StatelessWidget {
-  const SettingScreen({Key? key}) : super(key: key);
+  const SettingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +39,7 @@ class SettingScreen extends StatelessWidget {
 }
 
 class MyWidget extends StatefulWidget {
-  const MyWidget({Key? key}) : super(key: key);
+  const MyWidget({super.key});
 
   @override
   State<MyWidget> createState() => _MyWidgetState();

@@ -1,6 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class NumbersWidget extends StatelessWidget {
+  const NumbersWidget({super.key});
+
   @override
   Widget build(BuildContext context) => Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -12,6 +16,7 @@ class NumbersWidget extends StatelessWidget {
           buildButton(context, '50', 'Followers'),
         ],
       );
+  // ignore: sized_box_for_whitespace
   Widget buildDivider() => Container(
         height: 24,
         child: VerticalDivider(),

@@ -9,7 +9,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:my_app/endpoints/endpoints.dart';
 
 class FormScreen extends StatefulWidget {
-  const FormScreen({Key? key}) : super(key: key);
+  const FormScreen({super.key});
 
   @override
   _FormScreenState createState() => _FormScreenState();

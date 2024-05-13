@@ -3,7 +3,7 @@ import 'package:my_app/dto/news.dart';
 import 'package:my_app/services/data_service.dart';
 
 class NewsScreen extends StatefulWidget {
-  const NewsScreen({Key? key}) : super(key: key);
+  const NewsScreen({super.key});
 
   @override
   // ignore: library_private_types_in_public_api
@@ -32,14 +32,14 @@ class _NewsScreenState extends State<NewsScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Add News'),
+          title: const Text('Add News'),
           content: Form(
             key: _formStateKey,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Title'),
+                  decoration: const InputDecoration(labelText: 'Title'),
                   controller: _titleController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -50,7 +50,7 @@ class _NewsScreenState extends State<NewsScreen> {
                   onSaved: (value) => _title = value!,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Body'),
+                  decoration: const InputDecoration(labelText: 'Body'),
                   controller: _bodyController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -68,7 +68,7 @@ class _NewsScreenState extends State<NewsScreen> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             TextButton(
               onPressed: () {
@@ -78,7 +78,7 @@ class _NewsScreenState extends State<NewsScreen> {
                   Navigator.of(context).pop();
                 }
               },
-              child: Text('Add'),
+              child: const Text('Add'),
             ),
           ],
         );
@@ -104,14 +104,14 @@ class _NewsScreenState extends State<NewsScreen> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Edit News'),
+          title: const Text('Edit News'),
           content: Form(
             key: _formStateKey,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Title'),
+                  decoration: const InputDecoration(labelText: 'Title'),
                   controller: _titleController..text = news.title,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -122,7 +122,7 @@ class _NewsScreenState extends State<NewsScreen> {
                   onSaved: (value) => _title = value!,
                 ),
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'Body'),
+                  decoration: const InputDecoration(labelText: 'Body'),
                   controller: _bodyController..text = news.body,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -140,7 +140,7 @@ class _NewsScreenState extends State<NewsScreen> {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             TextButton(
               onPressed: () {
@@ -150,7 +150,7 @@ class _NewsScreenState extends State<NewsScreen> {
                   Navigator.of(context).pop();
                 }
               },
-              child: Text('Save'),
+              child: const Text('Save'),
             ),
           ],
         );
@@ -204,7 +204,7 @@ class _NewsScreenState extends State<NewsScreen> {
                       _editFormNews(context, post);
                     },
                     trailing: IconButton(
-                      icon: Icon(Icons.delete),
+                      icon: const Icon(Icons.delete),
                       onPressed: () {
                         _deleteNews(context, post.id);
                       },
@@ -224,7 +224,7 @@ class _NewsScreenState extends State<NewsScreen> {
         onPressed: () {
           _addFormNews(context);
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

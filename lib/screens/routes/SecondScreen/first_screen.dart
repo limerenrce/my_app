@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_final_fields
+
 import 'package:flutter/material.dart';
 import 'package:my_app/components/asset_image_widget.dart';
 
@@ -82,7 +84,7 @@ class FirstScreen extends StatelessWidget {
 }
 
 class Star extends StatefulWidget {
-  const Star({Key? key}) : super(key: key);
+  const Star({super.key});
 
   @override
   State<Star> createState() => _StarState();
@@ -137,9 +139,9 @@ class _StarState extends State<Star> {
                   : const Icon(Icons.bookmark)),
               onPressed: _toggleMarked,
             ),
-            SizedBox(
+            const SizedBox(
               child: SizedBox(
-                child: const Text('Bookmark'),
+                child: Text('Bookmark'),
               ),
             ),
           ]),
