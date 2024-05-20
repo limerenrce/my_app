@@ -73,13 +73,13 @@ class ProfileScreen extends StatelessWidget {
                             children: [
                               Card.outlined(
                                   child: _SampleCard(
-                                cardName: 'Software Engineer',
-                                location: '/first-screen',
+                                cardName: 'Balance',
+                                location: '/balance-screen',
                               )),
                               Card.outlined(
                                   child: _SampleCard(
-                                cardName: 'Data Scientist',
-                                location: '/second-screen',
+                                cardName: 'Spending',
+                                location: '/spending-screen',
                               )),
                             ],
                           ),
